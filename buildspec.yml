@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - |
-        mkdir .sam
+        [ -d .sam ] || mkdir .sam
         sls sam export --output ./.sam/sam-template.yml
         aws cloudformation package \
           --template-file ./.sam/sam-template.yml \
