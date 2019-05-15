@@ -1,0 +1,17 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - |
+        npm install -g serverless
+        npm install
+  build:
+    commands:
+      - |
+        sls package
+
+artifacts:
+  files:
+    - .serverless/*
+  discard-paths: yes
