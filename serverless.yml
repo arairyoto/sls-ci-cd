@@ -20,6 +20,10 @@ service: sls-sample-project # NOTE: update this with your service name
 provider:
   name: aws
   runtime: python3.7
+  deploymentBucket:
+    name: dev-serverless-deployments-arh
+    serverSideEncryption: AES256
+  deploymentPrefix: serverless
 
 # you can overwrite defaults here
 #  stage: dev
