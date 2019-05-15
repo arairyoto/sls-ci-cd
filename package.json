@@ -1,0 +1,24 @@
+{
+  "name": "sls-sample-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.py",
+  "dependencies": {
+    "serverless-aws-alias": "^1.7.1",
+    "serverless-sam": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arairyoto/sls-ci-cd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arairyoto/sls-ci-cd/issues"
+  },
+  "homepage": "https://github.com/arairyoto/sls-ci-cd#readme"
+}
