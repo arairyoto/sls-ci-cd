@@ -21,7 +21,7 @@ provider:
   name: aws
   runtime: python3.7
   deploymentBucket:
-    name: dev-serverless-deployments-arh
+    name: test-serverless-deployments-arh
     serverSideEncryption: AES256
   deploymentPrefix: serverless
 
