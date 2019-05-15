@@ -9,13 +9,14 @@ phases:
   build:
     commands:
       - |
-        sls sam export --output ./.serverless/sam-template.yml
+        [ -d .sam ] || mkdir .sam
+        sls sam export --output ./.sam/sam-template.yml
         aws cloudformation package \
-          --template-file ./.serverless/sam-template.yml \
+          --template-file ./.sam/sam-template.yml \
           --s3-bucket test-serverless-deployments-arh \
-          --output-template-file ./.serverless/packaged.yml
+          --output-template-file ./.sam/packaged.yml
 
 artifacts:
   files:
-    - .serverless/*
+    - .sam/*
   discard-paths: yes
