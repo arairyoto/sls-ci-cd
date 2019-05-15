@@ -9,7 +9,11 @@ phases:
   build:
     commands:
       - |
-        sls package
+        sls sam export --output ./.serverless/sam-template.yml
+        aws cloudformation package \
+          --template-file ./.serverless/sam-template.yml \
+          --s3-bucket test-serverless-deployments-arh \
+          --output-template-file ./.serverless/packaged.yml
 
 artifacts:
   files:
